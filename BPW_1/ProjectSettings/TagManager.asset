@@ -10,6 +10,7 @@ TagManager:
   - RedSuperCube
   - GreenSuperCube
   - PatrolSpots
+  - Lava
   layers:
   - Default
   - TransparentFX
