@@ -17,8 +17,8 @@ public class Teleportation : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var otherName = other.gameObject.name;
-        var teleportInfo = Teleportdata.Find(td => td.Name.Equals(otherName));
-        if (otherName == teleportInfo.Name)
+        var teleportInfo = Teleportdata?.Find(td => td.Name.Equals(otherName));
+        if (otherName == teleportInfo?.Name)
         {
             transform.position = teleportInfo.NewLocation.position;
             transform.rotation = teleportInfo.NewLocation.rotation;

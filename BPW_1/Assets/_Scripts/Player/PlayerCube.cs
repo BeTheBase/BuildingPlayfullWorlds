@@ -37,9 +37,9 @@ namespace Assets._Scripts.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            PickUpImage.SetActive(true);
             if (other.gameObject.name == "SuperCube")
             {
+                PickUpImage.SetActive(true);
                 SuperCube = other.gameObject;
                 item = other.gameObject.GetComponent<ItemPickup>().item;
                 if(superBody != null)

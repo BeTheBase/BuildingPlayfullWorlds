@@ -12,11 +12,14 @@ public class PlayerController : AbstractPlayerBehaviour
     public float StrafeSpeed = 5;
     public float Gravity = 20;
     public float JumpHeight = 2;
-    public bool CanJump = true;
-    public bool CanShoot = true;
     public float ShootSpeed;
     public float RayLength = 100f;
+    public float ToLow = -50;
 
+    public Vector3 StartPosition;
+
+    public bool CanJump = true;
+    public bool CanShoot = true;
     public bool IsRunning
     {
         get { return isRunning; }
@@ -41,6 +44,8 @@ public class PlayerController : AbstractPlayerBehaviour
     void Start()
     {
         cam = Camera.main;
+        if (StartPosition == null)
+            StartPosition = this.transform.position;
     }
 
     void FixedUpdate()
@@ -73,12 +78,15 @@ public class PlayerController : AbstractPlayerBehaviour
 
         // apply Gravity
         RBody.AddForce(new Vector3(0, -Gravity * RBody.mass, 0));
+
+        if (transform.position.y < ToLow)
+            transform.position = StartPosition;
     }
 
     void Update()
     {
         // check if the player is touching a surface below them
-        CheckGrounded();
+        //CheckGrounded();
 
         // check if the player is running
         if (isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
@@ -120,6 +128,18 @@ public class PlayerController : AbstractPlayerBehaviour
                     SetFocus(hit.collider.GetComponent<Interactable>());
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.layer == 0)
+            isGrounded = true;
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.layer == 0)
+            isGrounded = false;
     }
 
     void CheckGrounded()

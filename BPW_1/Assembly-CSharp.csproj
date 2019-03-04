@@ -85,6 +85,7 @@
     <Compile Include="Assets\_Scripts\Player\PlayerCube.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\AbstractPuzzleBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\CubeDoor.cs" />
+    <Compile Include="Assets\_Scripts\Puzzles\DoorHandler.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\IColorCubes.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\PlatformAttach.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\Teleportation.cs" />
