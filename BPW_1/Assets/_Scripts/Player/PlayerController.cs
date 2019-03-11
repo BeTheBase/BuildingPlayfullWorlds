@@ -13,7 +13,6 @@ public class PlayerController : AbstractPlayerBehaviour
     public float Gravity = 20;
     public float JumpHeight = 2;
     public float ShootSpeed;
-    public float RayLength = 100f;
     public float ToLow = -50;
 
     public Vector3 StartPosition;
@@ -30,9 +29,6 @@ public class PlayerController : AbstractPlayerBehaviour
     private bool isRunning = false;
     private bool isGrounded = false;
 
-    private Camera cam;				// Reference to our camera
-
-
     void Awake()
     {
         if (!RBody)
@@ -44,13 +40,13 @@ public class PlayerController : AbstractPlayerBehaviour
 
     void Start()
     {
-        cam = Camera.main;
         if (StartPosition == null)
             StartPosition = this.transform.position;
     }
 
     void FixedUpdate()
     {
+        CheckGrounded();
         // get correct Speed
         float forwardAndBackSpeed = WalkSpeed;
 
@@ -99,48 +95,19 @@ public class PlayerController : AbstractPlayerBehaviour
         if (!isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
         {
             isRunning = false;
-        }
-
-        // If we press left mouse
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Shoot out a ray
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, RayLength))
-            {
-                Focus = null;
-            }
-        }
-
-        // If we press right mouse
-        if (Input.GetKeyDown(KeyCode.E) && SuperCube == null)
-        {
-            // Shoot out a ray
-            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
-
-            // If we hit
-            if (Physics.Raycast(ray, out hit, RayLength))
-            {
-                if(hit.collider.name != "SuperCube")
-                    SetFocus(hit.collider.GetComponent<Interactable>());
-            }
-        }
+        }  
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.layer == 0)
-            isGrounded = true;
+        //if (other.gameObject.layer == 0)
+            //isGrounded = true;
     }
 
     private void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.layer == 0)
-            isGrounded = false;
+        //if (other.gameObject.layer == 0)
+            //isGrounded = false;
     }
 
     void CheckGrounded()

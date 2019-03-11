@@ -25,6 +25,8 @@ public class AttackBehaviour : StateMachineBehaviour
         else
         {
             animator.SetBool("isAttacking", true);
+            PlayerStats plyStats = PlayerPosition.gameObject.GetComponent<PlayerStats>();
+            plyStats.Lives = 0;
         }
 
     }
