@@ -70,6 +70,8 @@
     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\RenderEffectInspector.cs" />
     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\ShaderCustomEditor\ShaderMaterialsEditor.cs" />
     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\XUIUtils.cs" />
+    <Compile Include="Assets\RainDropEffect2\Editor\RainCameraControllerInspector.cs" />
+    <Compile Include="Assets\RainDropEffect2\Editor\SimpleRainInspector.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

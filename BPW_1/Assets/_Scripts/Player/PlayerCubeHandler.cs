@@ -79,7 +79,6 @@ public class PlayerCubeHandler : AbstractPlayerBehaviour
     {
         if (_activeCube == null) _activeCube = SuperCube;
         superCubeController = _activeCube.GetComponent<SuperCubeController>();
-        superCubeController.LastPosition = _activeCube.transform.position;
         superCubeController.SetDestination(HitPoint.transform.position, ShootSpeed);
         //activeBody.constraints = RigidbodyConstraints.None;
 

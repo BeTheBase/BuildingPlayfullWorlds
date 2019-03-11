@@ -19,6 +19,7 @@ namespace Assets._Scripts.Puzzles
 
         public bool activate = false;
         public bool once = false;
+       
 
         private string cubeTag = "BlueSuperCube";
 

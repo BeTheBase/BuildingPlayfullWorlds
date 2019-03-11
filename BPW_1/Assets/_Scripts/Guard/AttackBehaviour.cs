@@ -26,6 +26,8 @@ public class AttackBehaviour : StateMachineBehaviour
         {
             animator.SetBool("isAttacking", true);
             PlayerStats plyStats = PlayerPosition.gameObject.GetComponent<PlayerStats>();
+            //BloodRainCameraController bloodRainCameraController = GameObject.FindObjectOfType<BloodRainCameraController>();
+            //bloodRainCameraController.Attack(50);
             plyStats.Lives = 0;
         }
 

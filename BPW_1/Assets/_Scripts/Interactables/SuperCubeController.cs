@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class SuperCubeController : MonoBehaviour
 {
-    public Vector3 LastPosition;
     public bool IsOnHand = true;
+
     private Vector3 currentPosition;
     private Vector3 target;
     private float speed;
-    private Rigidbody rBody;
 
-    private void Start()
-    {
-        rBody = GetComponent<Rigidbody>();
-    }
     public void SetDestination(Vector3 _target, float _speed)
     {
         currentPosition = transform.position;
