@@ -41,12 +41,22 @@ namespace Assets._Scripts.Puzzles
                     StartCoroutine(RevertObjectAfterTime(data.DoorObject, data.DoorClosedPosition(), data.TimeToWait, data.TravelSpeed));
                 }
 
+                /*
                 for(int index = 0; index < data.DoorLocks.Count; index++)
                 {
                     activatedBooleans.Add(data.DoorLocks[index].activate);
 
                     if (activatedBooleans.TrueForAll(b => b))
                         data.ActivatedLocks = data.RequiredLocks;
+                }*/
+
+                foreach(var doorLock in data.DoorLocks)
+                {
+                    if (doorLock.activate)
+                        activatedBooleans.Add(doorLock.activate);
+
+                    foreach(bool activeBool in activatedBooleans)
+                        data.ActivatedLocks++;
                 }
                 /*
                 foreach (CubeDoor doorLocks in data.DoorLocks)

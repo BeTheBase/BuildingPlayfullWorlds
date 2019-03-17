@@ -11,6 +11,7 @@ TagManager:
   - GreenSuperCube
   - PatrolSpots
   - Lava
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,7 @@ namespace Assets._Scripts.Puzzles
     {
         public Material SpecialDoorMaterial;
 
-        public bool activate = false;
+        public bool Activate = false;
 
         private string cubeTag = "BlueSuperCube";
 
@@ -33,7 +33,7 @@ namespace Assets._Scripts.Puzzles
 
         private void FixedUpdate()
         {
-            if (activate)
+            if (Activate)
             {
                 transform.GetComponent<Renderer>().material = SpecialDoorMaterial;
             }
@@ -43,7 +43,7 @@ namespace Assets._Scripts.Puzzles
         {
             if (other.gameObject.tag == cubeTag)
             {
-                activate = true;
+                Activate = true;
             }
         }
     }

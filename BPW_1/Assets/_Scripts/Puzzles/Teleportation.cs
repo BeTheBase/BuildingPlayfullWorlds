@@ -27,7 +27,7 @@ public class Teleportation : MonoBehaviour
         }
         if (specialDoorComponent)
         {
-            if (specialDoorComponent.activate)
+            if (specialDoorComponent.Activate)
             {
                 transform.position = teleportInfo.SpecialLocation.position;
                 transform.rotation = teleportInfo.SpecialLocation.rotation;
