@@ -17,7 +17,6 @@ public class PlayerController : AbstractPlayerBehaviour
 
     public Vector3 StartPosition;
 
-
     public bool CanJump = true;
     public bool CanShoot = true;
     public bool IsRunning
@@ -42,6 +41,9 @@ public class PlayerController : AbstractPlayerBehaviour
     {
         if (StartPosition == null)
             StartPosition = this.transform.position;
+
+        if (AnimationHolder != null)
+            AnimationHolder.Play();
     }
 
     void FixedUpdate()

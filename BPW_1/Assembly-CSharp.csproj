@@ -102,6 +102,7 @@
     <Compile Include="Assets\_Scripts\Quests\QuestGiver.cs" />
     <Compile Include="Assets\_Scripts\Quests\QuestGoal.cs" />
     <Compile Include="Assets\_Scripts\SjorsTest.cs" />
+    <Compile Include="Assets\_Scripts\UI\WindowManager.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
