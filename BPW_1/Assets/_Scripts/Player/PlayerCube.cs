@@ -89,7 +89,7 @@ namespace Assets._Scripts.Player
             if (other.gameObject.name == "SuperCube")
             {
                 //When we are in range of a SuberCube object set pickup image feedback on active
-                PickUpImage.SetActive(true);
+                //PickUpImage.SetActive(true);
                 //Fill our SuperCube gameobject with the current colliding SuperCube 
                 SuperCube = other.gameObject;
                 //Set the item of the colliding SuberCube so we can add it and remove it
@@ -103,7 +103,7 @@ namespace Assets._Scripts.Player
         private void OnTriggerExit(Collider other)
         {
             //Set pickup feedback image on false
-            PickUpImage.SetActive(false);
+            //PickUpImage.SetActive(false);
         }
     }
 }

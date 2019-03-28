@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943368d654adb014f870faeb81c00ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRange: 10
+  MaxRange: 5
   Speed: 10
 --- !u!114 &114447184073678502
 MonoBehaviour:
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  MaxRange: 10
-  AttackRange: 2
+  MaxRange: 5
+  AttackRange: 3
 --- !u!1101 &1101015900301155384
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
