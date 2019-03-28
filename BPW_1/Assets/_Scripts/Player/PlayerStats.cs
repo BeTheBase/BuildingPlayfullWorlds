@@ -22,6 +22,8 @@ public class PlayerStats : MonoBehaviour
 
     public IEnumerator OnLivesChanged()
     {
+        var audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Play("Dead");
         BeenHitImage.gameObject.SetActive(true);
         BeenHitImage.CrossFadeAlpha(1, 2f, true);
         yield return new WaitForSeconds(3f);

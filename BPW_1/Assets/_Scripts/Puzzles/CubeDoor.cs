@@ -71,6 +71,7 @@ namespace Assets._Scripts.Puzzles
                     {
                         LerpTowardsDestiny(LerpObjects[index], Destinations[index].transform.position, TravelSpeed);
                     }
+                    FindObjectOfType<AudioManager>().Play("DoorLock");
                     StartCoroutine(DeactivateAfterTime(this.gameObject, LerpObjects, Destinations, TimeToWait));
                 }
                 if (!Deactivate)

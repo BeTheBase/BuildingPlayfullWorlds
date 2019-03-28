@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
             s.Source.volume = s.Volume;
             s.Source.pitch = s.Pitch;
             s.Source.loop = s.Loop;
+            s.Source.spatialBlend = s.SpacialSound;
         }
     }
 
@@ -40,7 +41,11 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         Sound s = Array.Find(_Sounds, sound => sound.name == name);
-        if(s != null)
-            s.Source.Play();
+        if(s == null)
+        {
+            Debug.LogWarning("Sound:" + name + "is not found!");
+            return;
+        }
+        s.Source.Play();
     }
 }

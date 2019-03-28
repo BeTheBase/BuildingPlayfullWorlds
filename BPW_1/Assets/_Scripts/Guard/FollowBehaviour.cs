@@ -7,15 +7,12 @@ public class FollowBehaviour : StateMachineBehaviour
     public float Speed;
     public float MaxRange = 5;
     public float AttackRange = 2;
-    private AudioSource source;
     private Transform playerPos;
 
     // Start
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        source = animator.GetComponent<AudioSource>();
-        source.Play();
-
+        FindObjectOfType<AudioManager>().Play("GuardAttack");
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

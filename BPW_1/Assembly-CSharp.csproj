@@ -108,6 +108,7 @@
     <Compile Include="Assets\_Scripts\UI\WindowManager.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Jemeza\25 Free Ambient Horror Sounds\Example\Scripts\SoundPlayer.cs" />
     <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\Environment\Scripts\Move.cs" />
     <Compile Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\Environment\Scripts\PointLight.cs" />
@@ -161,9 +162,11 @@
     <None Include="Assets\RainDropEffect2\Shaders\Resources\RainDistortion (Deffered).shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\_Fonts\OFL.txt" />
+    <None Include="Assets\Free Pack\Metal Loop Pack\readme Unity.txt" />
     <None Include="Assets\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
     <None Include="Assets\VolumetricLines\Shaders\Additive.shader" />
     <None Include="Assets\VolumetricLines\Shaders\AlphaBlended.shader" />
+    <None Include="Assets\Free Pack\Door SFX Pack\Readme.txt" />
     <None Include="Assets\GalaxyBox2\instructions.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
@@ -178,12 +181,15 @@
     <None Include="Assets\RainDropEffect2\Shaders\Resources\RainNoDistortion.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\RainDropEffect2\Shaders\Resources\RainDropGlobal.cginc" />
+    <None Include="Assets\Free Pack\Rock Loops Pack\Unity Readme.txt" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Particlecollection_Free samples\READ ME.txt" />
+    <None Include="Assets\Free Pack\Tropical Moments\Tropical Moments readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Free Pack\Rock Stingers Pack\Unity Readme.txt" />
     <None Include="Assets\VolumetricLines\Shaders\Fast-AlphaBlended.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\VolumetricLines\Shaders\Strip-AlphaBlended.shader" />
