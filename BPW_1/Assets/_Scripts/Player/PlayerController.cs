@@ -13,7 +13,6 @@ public class PlayerController : AbstractPlayerBehaviour
     public float Gravity = 20;
     public float JumpHeight = 2;
     public float ShootSpeed;
-    public float ToLow = -50;
 
 
     public bool CanJump = true;
@@ -27,6 +26,8 @@ public class PlayerController : AbstractPlayerBehaviour
     private bool isRunning = false;
     private bool isGrounded = false;
 
+    public GameObject UI;
+
     private Vector3 StartPosition;
 
     void Awake()
@@ -36,6 +37,8 @@ public class PlayerController : AbstractPlayerBehaviour
 
         RBody.freezeRotation = true;
         RBody.useGravity = false;
+
+        UI.SetActive(false);
     }
 
     void Start()
@@ -78,11 +81,7 @@ public class PlayerController : AbstractPlayerBehaviour
         // apply Gravity
         RBody.AddForce(new Vector3(0, -Gravity * RBody.mass, 0));
 
-        if (transform.position.y < ToLow)
-        {
-            FindObjectOfType<AudioManager>().Play("Dead");
-            transform.position = StartPosition;
-        }
+
     }
 
     void Update()
@@ -101,6 +100,20 @@ public class PlayerController : AbstractPlayerBehaviour
         {
             isRunning = false;
         }  
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (UI.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                UI.SetActive(false);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                UI.SetActive(true);
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision other)

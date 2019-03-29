@@ -55,6 +55,8 @@ namespace Assets._Scripts.Puzzles
                 */
                 foreach (var doorLock in data.DoorLocks)
                 {
+                    if (doorLock == null) return;
+
                     if (doorLock.activate)
                         activatedBooleans.Add(doorLock.activate);
 

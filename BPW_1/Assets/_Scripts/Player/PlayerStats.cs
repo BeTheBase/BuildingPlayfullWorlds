@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
 {
     public int Lives = 1;
     public Image BeenHitImage;
+    public float ToLow = -50;
 
     private void Start()
     {
@@ -18,6 +19,11 @@ public class PlayerStats : MonoBehaviour
     {
         if (Lives < 1)
             StartCoroutine(OnLivesChanged());
+
+        if (transform.position.y < ToLow)
+        {
+            StartCoroutine(OnLivesChanged());
+        }
     }
 
     public IEnumerator OnLivesChanged()

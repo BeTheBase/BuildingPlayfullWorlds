@@ -29,6 +29,18 @@ public class WindowManager : MonoBehaviour
         StartCoroutine(LoadSceneAfterTime(time));
     }
 
+    public void PlayGame(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void ResumeGame(GameObject _activeObj)
+    {
+        Time.timeScale = 1f;
+        _activeObj.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public void QuitGame()
     {
         Application.Quit();

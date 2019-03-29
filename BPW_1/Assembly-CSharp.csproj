@@ -106,6 +106,7 @@
     <Compile Include="Assets\_Scripts\Sound\AudioManager.cs" />
     <Compile Include="Assets\_Scripts\Sound\AwakeSound.cs" />
     <Compile Include="Assets\_Scripts\Sound\Sound.cs" />
+    <Compile Include="Assets\_Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\_Scripts\UI\WindowManager.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
