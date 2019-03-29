@@ -11,12 +11,17 @@ public abstract class AbstractPlayerBehaviour : MonoBehaviour
     public OnFocusChanged OnFocusChangedCallback;
     public Interactable Focus;  // Our current Focus: Item, Enemy etc.
     public GameObject PickUpImage;
+    public Animation AnimationHolder;
+    public Camera cam;				// Reference to our camera
+
 
 
 
     private void Awake()
     {
-        if(PickUpImage != null)
+        cam = Camera.main;
+
+        if (PickUpImage != null)
             PickUpImage.SetActive(false);
         RBody = GetComponent<Rigidbody>();
     }

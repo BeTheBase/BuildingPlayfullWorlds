@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3955761802259587158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3955761802259587176}
+  - component: {fileID: 3955761802259587177}
+  - component: {fileID: 3955761802259587179}
+  - component: {fileID: 3955761802259587181}
+  - component: {fileID: 3955761802259587180}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: PatrolSpots
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3955761802259587176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955761802259587158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1440, y: 480, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3955761802259587177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955761802259587158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8e586012a393c47a22105716636b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Space: 10
+  Items: []
+--- !u!114 &3955761802259587179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955761802259587158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41fcb578bd31819419828324ab9b3f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Surface: []
+--- !u!114 &3955761802259587181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955761802259587158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11378f22f65b3a44d97d1f57e754f85c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeLeft: 500
+  _Quest:
+    IsActive: 0
+    Title: 
+    Description: 
+    Reward: 0
+    Goal:
+      _GoalType: 0
+      RequiredAmount: 0
+      CurrentAmount: 0
+--- !u!114 &3955761802259587180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955761802259587158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bcb90b21e4a7942932825cb228bcea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorCubes: 0
+  DoorLockCount: 0
+  Doordata:
+  - RequiredLocks: 3
+    ActivatedLocks: 0
+    DoorObject: {fileID: 0}
+    DoorDestiny: {fileID: 0}
+    TravelSpeed: 1
+    TimeToWait: 10
+    DoorLocks:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - RequiredLocks: 3
+    ActivatedLocks: 0
+    DoorObject: {fileID: 0}
+    DoorDestiny: {fileID: 0}
+    TravelSpeed: 1
+    TimeToWait: 100
+    DoorLocks:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}

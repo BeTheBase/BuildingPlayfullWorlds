@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class PatrolBehaviour : StateMachineBehaviour
 {
     public float MaxRange = 5;
+    private GameObject[] patrolList;
+
     private PatrolSpots patrol;
     public float Speed = 10;
     private int randomSpot;
@@ -14,8 +16,14 @@ public class PatrolBehaviour : StateMachineBehaviour
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        patrol = GameObject.FindGameObjectWithTag("PatrolSpots").GetComponent<PatrolSpots>();
+        patrolList = GameObject.FindGameObjectsWithTag("PatrolSpots");
+        for(int index = 0; index < patrolList.Length; index++)
+        {
+            if (patrolList[index].name == animator.gameObject.name)
+                patrol = patrolList[index].GetComponent<PatrolSpots>();
+        }
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        if (patrol == null) patrol = patrolList[0].GetComponent<PatrolSpots>();
         randomSpot = Random.Range(0, patrol.patrolPoints.Length);
         agent = animator.GetComponent<NavMeshAgent>();
     }

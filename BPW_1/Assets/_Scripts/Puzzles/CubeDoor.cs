@@ -17,8 +17,9 @@ namespace Assets._Scripts.Puzzles
 
         private Vector3[] originalPositions;
 
-        private bool activate = false;
-        private bool isLonger = false;
+        public bool activate = false;
+        public bool once = false;
+       
 
         private string cubeTag = "BlueSuperCube";
 
@@ -30,6 +31,7 @@ namespace Assets._Scripts.Puzzles
                 {
                     lerpObj.GetComponent<Renderer>().material = NewMaterial;
                 }
+                
             }
 
             originalPositions = new Vector3[LerpObjects.Length];
@@ -63,11 +65,13 @@ namespace Assets._Scripts.Puzzles
 
             if (activate)
             {
+                if (LerpObjects == null) return;
                 if (Deactivate)
                 {
+
                     for (int index = 0; index < LerpObjects.Length; index++)
                     {
-                        LerpTowardsDestiny(LerpObjects[index], Destinations[index], TravelSpeed);
+                        LerpTowardsDestiny(LerpObjects[index], Destinations[index].transform.position, TravelSpeed);
                     }
                     StartCoroutine(DeactivateAfterTime(this.gameObject, LerpObjects, Destinations, TimeToWait));
                 }
@@ -85,6 +89,10 @@ namespace Assets._Scripts.Puzzles
         {
             if (other.gameObject.tag == cubeTag)
             {
+                FindObjectOfType<AudioManager>().Play("DoorLock");
+                //if(!once)
+                    //FindObjectOfType<DoorHandler>().UpdateDoors();
+                //once = true;
                 activate = true;
             }
         }

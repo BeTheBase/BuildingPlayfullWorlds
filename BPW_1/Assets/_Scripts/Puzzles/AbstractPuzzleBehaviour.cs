@@ -8,21 +8,23 @@ namespace Assets._Scripts.Puzzles
         public enum Cubes { Blue = 0, Red = 1, Green = 2 }
         public Cubes ColorCubes = Cubes.Blue;
 
+        public delegate void OnLockUnLocked();
+        public OnLockUnLocked OnLockUnLockedCallback;
+        public int DoorLockCount = 0;
+
         /// <summary>
         /// Lerps a GameObject from his current position towards new destiny with travelSpeed
         /// </summary>
         /// <param name="objToLerp"></param>
         /// <param name="destiny"></param>
         /// <param name="travelSpeed"></param>
-        public void LerpTowardsDestiny(GameObject objToLerp, Transform destiny, float travelSpeed)
+        public void LerpTowardsDestiny(GameObject objToLerp, Vector3 destiny, float travelSpeed)
         {
-            objToLerp.transform.position = Vector3.Lerp(objToLerp.transform.position, destiny.position, travelSpeed * Time.deltaTime);
+            objToLerp.transform.position = Vector3.Lerp(objToLerp.transform.position, destiny, travelSpeed * Time.deltaTime);
         }
 
         public void LerpPingPong(GameObject objToLerp, Vector3 originalPosition, Transform destinty, float travelSpeed)
         {
-            var timer = 0f;
-            timer += Time.deltaTime;
             objToLerp.transform.position = Vector3.Lerp(originalPosition, destinty.position, Mathf.PingPong(Time.time * travelSpeed, 1.0f));
         }
 
@@ -45,6 +47,12 @@ namespace Assets._Scripts.Puzzles
                 destObj.gameObject.SetActive(false);
             }
             controlObj.SetActive(false);
+        }
+
+        public IEnumerator RevertObjectAfterTime(GameObject obj, Vector3 dest, float timeToWait, float travelSpeed)
+        {
+            yield return new WaitForSecondsRealtime(timeToWait);
+            LerpTowardsDestiny(obj, dest, travelSpeed);
         }
 
 

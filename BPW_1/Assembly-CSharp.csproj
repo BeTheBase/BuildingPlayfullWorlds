@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_3;UNITY_2018_3;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_3;UNITY_2018_3;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -73,21 +73,44 @@
     <Compile Include="Assets\_Scripts\Guard\PatrolSpots.cs" />
     <Compile Include="Assets\_Scripts\Interactables\Interactable.cs" />
     <Compile Include="Assets\_Scripts\Interactables\ItemPickup.cs" />
-    <Compile Include="Assets\_Scripts\Interactables\SuperCubePickup.cs" />
+    <Compile Include="Assets\_Scripts\Interactables\SuperCubeController.cs" />
+    <Compile Include="Assets\_Scripts\Interactables\WeaponSwitch.cs" />
     <Compile Include="Assets\_Scripts\Inventory.cs" />
     <Compile Include="Assets\_Scripts\InventorySlot.cs" />
     <Compile Include="Assets\_Scripts\InventoryUI.cs" />
     <Compile Include="Assets\_Scripts\Item.cs" />
     <Compile Include="Assets\_Scripts\LevelManager.cs" />
+    <Compile Include="Assets\_Scripts\Parabola\MathParabola.cs" />
+    <Compile Include="Assets\_Scripts\Parabola\ParabolaController.cs" />
     <Compile Include="Assets\_Scripts\Player\AbstractPlayerBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerCube.cs" />
+    <Compile Include="Assets\_Scripts\Player\PlayerCubeHandler.cs" />
+    <Compile Include="Assets\_Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\AbstractPuzzleBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\CubeDoor.cs" />
+    <Compile Include="Assets\_Scripts\Puzzles\DoorHandler.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\IColorCubes.cs" />
+    <Compile Include="Assets\_Scripts\Puzzles\Lazer.cs" />
     <Compile Include="Assets\_Scripts\Puzzles\PlatformAttach.cs" />
+    <Compile Include="Assets\_Scripts\Puzzles\SpecialDoor.cs" />
+    <Compile Include="Assets\_Scripts\Puzzles\Teleportation.cs" />
+    <Compile Include="Assets\_Scripts\Puzzles\TeleportLocations.cs" />
+    <Compile Include="Assets\_Scripts\Quests\PlayerQuest.cs" />
+    <Compile Include="Assets\_Scripts\Quests\Quest.cs" />
+    <Compile Include="Assets\_Scripts\Quests\QuestGiver.cs" />
+    <Compile Include="Assets\_Scripts\Quests\QuestGoal.cs" />
+    <Compile Include="Assets\_Scripts\Rocket\Escape.cs" />
     <Compile Include="Assets\_Scripts\SjorsTest.cs" />
+    <Compile Include="Assets\_Scripts\Sound\AudioManager.cs" />
+    <Compile Include="Assets\_Scripts\Sound\AwakeSound.cs" />
+    <Compile Include="Assets\_Scripts\Sound\Sound.cs" />
+    <Compile Include="Assets\_Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\_Scripts\UI\WindowManager.cs" />
+    <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
+    <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\Environment\Scripts\Move.cs" />
     <Compile Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\Environment\Scripts\PointLight.cs" />
     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\CameraTarget.cs" />
@@ -96,31 +119,88 @@
     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\EffectShaderPropertyStr.cs" />
     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\RenderEffect.cs" />
     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\TransformExtension.cs" />
+    <Compile Include="Assets\RainDropEffect2\Demo\Scripts\AxisRotator.cs" />
+    <Compile Include="Assets\RainDropEffect2\Demo\Scripts\DemoScene1.cs" />
+    <Compile Include="Assets\RainDropEffect2\Demo\Scripts\DemoScene2.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Camera\RainCameraController.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Common\DropTrail.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Common\RainBehaviourBase.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Common\RainDrawer.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Common\RainDrawerContainer.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Common\RainDropTools.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Misc\BloodRainCameraController.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\Misc\FpsDisplay.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\FlowRain\FlowRainBehaviour.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\FlowRain\FlowRainController.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\FlowRain\FlowRainVariables.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\FrictionFlowRain\FrictionFlowRainBehaviour.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\FrictionFlowRain\FrictionFlowRainController.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\FrictionFlowRain\FrictionFlowRainVariables.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\SimpleRain\SimpleRainBehaviour.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\SimpleRain\SimpleRainController.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\SimpleRain\SimpleRainVariables.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\StaticRain\StaticRainBehaviour.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\StaticRain\StaticRainController.cs" />
+    <Compile Include="Assets\RainDropEffect2\Scripts\RainBehaviours\StaticRain\StaticRainVariables.cs" />
     <Compile Include="Assets\SoundManager\Demo\SoundManagerDemo.cs" />
     <Compile Include="Assets\SoundManager\SoundManager.cs" />
+    <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+    <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\Utils\TransformExtensionMethods.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineSettings.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricMultiLineBehavior.cs" />
+    <None Include="Assets\RainDropEffect2\Shaders\Resources\RainDistortion (Forward).shader" />
+    <None Include="Assets\VolumetricLines\Shaders\_StripShader.cginc" />
+    <None Include="Assets\RainDropEffect2\Shaders\Resources\RainDistortion (Mobile).shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\SoundManager\Readme.txt" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
+    <None Include="Assets\RainDropEffect2\Shaders\Resources\RainDistortion (Deffered).shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\_Fonts\OFL.txt" />
+    <None Include="Assets\Free Pack\Metal Loop Pack\readme Unity.txt" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\Additive.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\AlphaBlended.shader" />
+    <None Include="Assets\Free Pack\Door SFX Pack\Readme.txt" />
+    <None Include="Assets\GalaxyBox2\instructions.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
     <None Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\READ ME FIRST!!!\character setup guide link.txt" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\effect_distortion_mask.shader" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddSoftEffect.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\Strip-Additive.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Lava_Flowing_Shader\ReadMe.txt" />
+    <None Include="Assets\RainDropEffect2\Shaders\Resources\RainNoDistortion.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\RainDropEffect2\Shaders\Resources\RainDropGlobal.cginc" />
+    <None Include="Assets\Free Pack\Rock Loops Pack\Unity Readme.txt" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Particlecollection_Free samples\READ ME.txt" />
+    <None Include="Assets\Free Pack\Tropical Moments\Tropical Moments readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Free Pack\Rock Stingers Pack\Unity Readme.txt" />
+    <None Include="Assets\VolumetricLines\Shaders\Fast-AlphaBlended.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\Strip-AlphaBlended.shader" />
+    <None Include="Assets\RainDropEffect2\ReadMe.txt" />
+    <None Include="Assets\VolumetricLines\Shaders\Fast-Additive.shader" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddEffect.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\_SimpleShader.cginc" />
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Additive.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\READ ME FIRST!!!\read me.txt" />
@@ -128,19 +208,25 @@
     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleBlendEffect.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -344,13 +430,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.3f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BPW_1/BPW_1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/basco/OneDrive/Documenten/GitHub/BuildingPlayfullWorlds/BPW_1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

@@ -12,11 +12,11 @@ public class PlayerController : AbstractPlayerBehaviour
     public float StrafeSpeed = 5;
     public float Gravity = 20;
     public float JumpHeight = 2;
+    public float ShootSpeed;
+
+
     public bool CanJump = true;
     public bool CanShoot = true;
-    public float ShootSpeed;
-    public float RayLength = 100f;
-
     public bool IsRunning
     {
         get { return isRunning; }
@@ -26,8 +26,9 @@ public class PlayerController : AbstractPlayerBehaviour
     private bool isRunning = false;
     private bool isGrounded = false;
 
-    private Camera cam;				// Reference to our camera
+    public GameObject UI;
 
+    private Vector3 StartPosition;
 
     void Awake()
     {
@@ -36,15 +37,21 @@ public class PlayerController : AbstractPlayerBehaviour
 
         RBody.freezeRotation = true;
         RBody.useGravity = false;
+
+        UI.SetActive(false);
     }
 
     void Start()
     {
-        cam = Camera.main;
+        StartPosition = this.transform.position;
+
+        if (AnimationHolder != null)
+            AnimationHolder.Play();
     }
 
     void FixedUpdate()
     {
+        CheckGrounded();
         // get correct Speed
         float forwardAndBackSpeed = WalkSpeed;
 
@@ -73,12 +80,14 @@ public class PlayerController : AbstractPlayerBehaviour
 
         // apply Gravity
         RBody.AddForce(new Vector3(0, -Gravity * RBody.mass, 0));
+
+
     }
 
     void Update()
     {
         // check if the player is touching a surface below them
-        CheckGrounded();
+        //CheckGrounded();
 
         // check if the player is running
         if (isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
@@ -90,36 +99,33 @@ public class PlayerController : AbstractPlayerBehaviour
         if (!isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
         {
             isRunning = false;
-        }
+        }  
 
-        // If we press left mouse
-        if (Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            // Shoot out a ray
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, RayLength))
+            if (UI.activeSelf)
             {
-                Focus = null;
+                Cursor.lockState = CursorLockMode.Locked;
+                UI.SetActive(false);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                UI.SetActive(true);
             }
         }
+    }
 
-        // If we press right mouse
-        if (Input.GetKeyDown(KeyCode.E) && SuperCube == null)
-        {
-            // Shoot out a ray
-            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
+    private void OnCollisionEnter(Collision other)
+    {
+        //if (other.gameObject.layer == 0)
+            //isGrounded = true;
+    }
 
-            // If we hit
-            if (Physics.Raycast(ray, out hit, RayLength))
-            {
-                if(hit.collider.name != "SuperCube")
-                    SetFocus(hit.collider.GetComponent<Interactable>());
-            }
-        }
+    private void OnCollisionExit(Collision other)
+    {
+        //if (other.gameObject.layer == 0)
+            //isGrounded = false;
     }
 
     void CheckGrounded()

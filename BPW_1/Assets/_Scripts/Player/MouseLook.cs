@@ -29,11 +29,12 @@ public class MouseLook : AbstractPlayerBehaviour
         // Make the rigidbody not change rotation
         if (RBody)
             RBody.freezeRotation = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
 
         if (Axes == RotationAxes.MouseXAndY)
         {
