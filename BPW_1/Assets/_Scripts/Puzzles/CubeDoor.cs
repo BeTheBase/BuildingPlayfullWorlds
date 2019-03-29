@@ -31,6 +31,7 @@ namespace Assets._Scripts.Puzzles
                 {
                     lerpObj.GetComponent<Renderer>().material = NewMaterial;
                 }
+                
             }
 
             originalPositions = new Vector3[LerpObjects.Length];
@@ -89,9 +90,9 @@ namespace Assets._Scripts.Puzzles
             if (other.gameObject.tag == cubeTag)
             {
                 FindObjectOfType<AudioManager>().Play("DoorLock");
-                if(!once)
-                    FindObjectOfType<DoorHandler>().UpdateDoors();
-                once = true;
+                //if(!once)
+                    //FindObjectOfType<DoorHandler>().UpdateDoors();
+                //once = true;
                 activate = true;
             }
         }

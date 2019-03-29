@@ -15,7 +15,6 @@ public class PlayerController : AbstractPlayerBehaviour
     public float ShootSpeed;
     public float ToLow = -50;
 
-    public Vector3 StartPosition;
 
     public bool CanJump = true;
     public bool CanShoot = true;
@@ -28,6 +27,8 @@ public class PlayerController : AbstractPlayerBehaviour
     private bool isRunning = false;
     private bool isGrounded = false;
 
+    private Vector3 StartPosition;
+
     void Awake()
     {
         if (!RBody)
@@ -39,8 +40,7 @@ public class PlayerController : AbstractPlayerBehaviour
 
     void Start()
     {
-        if (StartPosition == null)
-            StartPosition = this.transform.position;
+        StartPosition = this.transform.position;
 
         if (AnimationHolder != null)
             AnimationHolder.Play();

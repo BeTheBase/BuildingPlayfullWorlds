@@ -33,8 +33,8 @@ namespace Assets._Scripts.Puzzles
 
         private void Update()
         {
-            /*
-            foreach(DoorData data in Doordata)
+
+            foreach (DoorData data in Doordata)
             {
                 List<bool> activatedBooleans = new List<bool>();
 
@@ -52,16 +52,17 @@ namespace Assets._Scripts.Puzzles
                     if (activatedBooleans.TrueForAll(b => b))
                         data.ActivatedLocks = data.RequiredLocks;
                 }
-
-                foreach(var doorLock in data.DoorLocks)
+                */
+                foreach (var doorLock in data.DoorLocks)
                 {
                     if (doorLock.activate)
                         activatedBooleans.Add(doorLock.activate);
 
-                    foreach(bool activeBool in activatedBooleans)
+                    foreach (bool activeBool in activatedBooleans)
                         data.ActivatedLocks++;
                 }
-                
+
+                /*
                 foreach (CubeDoor doorLocks in data.DoorLocks)
                 {
                     if (doorLocks.once)
@@ -69,7 +70,8 @@ namespace Assets._Scripts.Puzzles
                         data.ActivatedLocks++;
                     }
                 }*/
-                      
+
+            }
         }
 
         public void UpdateDoors()
@@ -95,6 +97,7 @@ namespace Assets._Scripts.Puzzles
 
                 foreach (var doorLock in data.DoorLocks)
                 {
+                    if (doorLock == null) return;
                     if (doorLock.activate)
                         activatedBooleans.Add(doorLock.activate);
 

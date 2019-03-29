@@ -101,6 +101,7 @@
     <Compile Include="Assets\_Scripts\Quests\Quest.cs" />
     <Compile Include="Assets\_Scripts\Quests\QuestGiver.cs" />
     <Compile Include="Assets\_Scripts\Quests\QuestGoal.cs" />
+    <Compile Include="Assets\_Scripts\Rocket\Escape.cs" />
     <Compile Include="Assets\_Scripts\SjorsTest.cs" />
     <Compile Include="Assets\_Scripts\Sound\AudioManager.cs" />
     <Compile Include="Assets\_Scripts\Sound\AwakeSound.cs" />
@@ -108,7 +109,6 @@
     <Compile Include="Assets\_Scripts\UI\WindowManager.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Jemeza\25 Free Ambient Horror Sounds\Example\Scripts\SoundPlayer.cs" />
     <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\Environment\Scripts\Move.cs" />
     <Compile Include="Assets\LowPoly Fantasy Monsters Pack Ver1.0_Demo\Environment\Scripts\PointLight.cs" />
