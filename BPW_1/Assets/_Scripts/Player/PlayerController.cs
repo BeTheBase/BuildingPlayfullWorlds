@@ -79,7 +79,10 @@ public class PlayerController : AbstractPlayerBehaviour
         RBody.AddForce(new Vector3(0, -Gravity * RBody.mass, 0));
 
         if (transform.position.y < ToLow)
+        {
+            FindObjectOfType<AudioManager>().Play("Dead");
             transform.position = StartPosition;
+        }
     }
 
     void Update()

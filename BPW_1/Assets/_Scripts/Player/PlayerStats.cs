@@ -27,6 +27,6 @@ public class PlayerStats : MonoBehaviour
         BeenHitImage.gameObject.SetActive(true);
         BeenHitImage.CrossFadeAlpha(1, 2f, true);
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

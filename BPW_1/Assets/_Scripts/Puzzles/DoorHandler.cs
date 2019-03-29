@@ -29,8 +29,11 @@ namespace Assets._Scripts.Puzzles
 
         public List<DoorData> Doordata;
 
+        public static DoorHandler Instance;
+
         private void Update()
         {
+            /*
             foreach(DoorData data in Doordata)
             {
                 List<bool> activatedBooleans = new List<bool>();
@@ -48,7 +51,7 @@ namespace Assets._Scripts.Puzzles
 
                     if (activatedBooleans.TrueForAll(b => b))
                         data.ActivatedLocks = data.RequiredLocks;
-                }*/
+                }
 
                 foreach(var doorLock in data.DoorLocks)
                 {
@@ -56,6 +59,46 @@ namespace Assets._Scripts.Puzzles
                         activatedBooleans.Add(doorLock.activate);
 
                     foreach(bool activeBool in activatedBooleans)
+                        data.ActivatedLocks++;
+                }
+                
+                foreach (CubeDoor doorLocks in data.DoorLocks)
+                {
+                    if (doorLocks.once)
+                    {
+                        data.ActivatedLocks++;
+                    }
+                }*/
+                      
+        }
+
+        public void UpdateDoors()
+        {
+            foreach (DoorData data in Doordata)
+            {
+                List<bool> activatedBooleans = new List<bool>();
+
+                if (data.UnLockDoor())
+                {
+                    LerpTowardsDestiny(data.DoorObject, data.DoorDestiny.transform.position, data.TravelSpeed);
+                    //StartCoroutine(RevertObjectAfterTime(data.DoorObject, data.DoorClosedPosition(), data.TimeToWait, data.TravelSpeed));
+                }
+
+                /*
+                for(int index = 0; index < data.DoorLocks.Count; index++)
+                {
+                    activatedBooleans.Add(data.DoorLocks[index].activate);
+
+                    if (activatedBooleans.TrueForAll(b => b))
+                        data.ActivatedLocks = data.RequiredLocks;
+                }*/
+
+                foreach (var doorLock in data.DoorLocks)
+                {
+                    if (doorLock.activate)
+                        activatedBooleans.Add(doorLock.activate);
+
+                    foreach (bool activeBool in activatedBooleans)
                         data.ActivatedLocks++;
                 }
                 /*
@@ -66,7 +109,7 @@ namespace Assets._Scripts.Puzzles
                         data.ActivatedLocks++;
                     }
                 }*/
-            }            
+            }
         }
 
     }

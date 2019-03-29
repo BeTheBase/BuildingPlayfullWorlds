@@ -64,14 +64,14 @@ namespace Assets._Scripts.Puzzles
 
             if (activate)
             {
-                once = false;
+                if (LerpObjects == null) return;
                 if (Deactivate)
                 {
+
                     for (int index = 0; index < LerpObjects.Length; index++)
                     {
                         LerpTowardsDestiny(LerpObjects[index], Destinations[index].transform.position, TravelSpeed);
                     }
-                    FindObjectOfType<AudioManager>().Play("DoorLock");
                     StartCoroutine(DeactivateAfterTime(this.gameObject, LerpObjects, Destinations, TimeToWait));
                 }
                 if (!Deactivate)
@@ -88,6 +88,9 @@ namespace Assets._Scripts.Puzzles
         {
             if (other.gameObject.tag == cubeTag)
             {
+                FindObjectOfType<AudioManager>().Play("DoorLock");
+                if(!once)
+                    FindObjectOfType<DoorHandler>().UpdateDoors();
                 once = true;
                 activate = true;
             }
